@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESL Grammar Exercises</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <img src="images/logo.png" alt="ESL Grammar Exercises" class="logo">
+      <div class="header-text">
+        <h1>ESL Grammar Exercises</h1>
+        <p class="tagline">Practice English grammar with fill-in-the-blank exercises</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="menu" id="menu">
+        <!-- Populated by JavaScript -->
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="content" id="content">
+        <div class="welcome" id="welcome">
+          <h2>Welcome</h2>
+          <p>Select a grammar point and exercise from the menu on the left to begin practicing.</p>
+          <p>Each exercise contains 10 fill-in-the-blank questions. Complete all items and click <strong>Check Answers</strong> to see your score.</p>
+        </div>
+
+        <div class="grammar-view hidden" id="grammar-view">
+          <div class="grammar-explanation" id="grammar-explanation"></div>
+          <div class="exercise-section" id="exercise-section">
+            <div class="exercise-header">
+              <h3 id="exercise-title"></h3>
+              <span class="difficulty-badge" id="difficulty-badge"></span>
+            </div>
+            <form class="exercise-form" id="exercise-form">
+              <ol class="exercise-list" id="exercise-list"></ol>
+              <div class="exercise-actions">
+                <button type="button" class="btn btn-secondary" id="btn-reset">Reset</button>
+                <button type="submit" class="btn btn-primary" id="btn-check">Check Answers</button>
+              </div>
+            </form>
+            <div class="results hidden" id="results">
+              <h4>Your Score: <span id="score">0</span>/10</h4>
+              <div id="feedback-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data/exercises.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
